@@ -23,7 +23,8 @@
 
       in  nixpkgs.lib.nixosSystem {
         
-        system = "x86_64-linux";
+        # system = "x86_64-linux";
+        system.stateVersion = "24.05"; # Did you read the comment?
         inherit specialArgs;
         modules = [
         # Import the previous configuration.nix we used,
