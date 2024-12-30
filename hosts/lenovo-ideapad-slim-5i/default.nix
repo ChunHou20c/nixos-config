@@ -5,6 +5,7 @@
     ../../modules/hyprland.nix
     ../../modules/sddm-theme.nix
     ../../modules/systems.nix
+    ./hardware-configuration.nix
   ];
 
   #bootloader
