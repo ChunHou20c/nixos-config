@@ -149,74 +149,36 @@
     firefox
     firefox-devedition
 
-
+    eza
     wdisplays
 
-    networkmanagerapplet
-    waybar
-    eww
-    dunst
-    libnotify
-    swww
-
-    lz4
-
-    wofi
-    ntfs3g
-    imv
-    eza
-
-    #for eww bar
-    python310
-    ruby
-    jq
-    swaylock-effects
-    swaylock
-    swayidle
-
-
-    wireguard-tools
+    # virtualization tools
     distrobox
     podman
-    copyq
+
     networkmanager-openvpn
-    sway-contrib.grimshot
+    wireguard-tools
+    # terminal multiplexer
     zellij
     tmux
-    vscodium
-    pamixer
+
     lutris  
     gamemode
     gamescope
 
     ffmpeg
 
-    # clipboard for wayland
-    wl-clipboard
+    # for sddm
+    libsForQt5.qt5.qtquickcontrols2   
+    libsForQt5.qt5.qtgraphicaleffects
 
     # support both 32- and 64-bit applications
     wineWowPackages.stable
-
-    # winetricks (all versions)
     winetricks
-
-    # native wayland support (unstable)
     wineWowPackages.waylandFull
+
     git
-    pavucontrol
     rustup
-
-    # language server
-    nil
-    tailwindcss-language-server
-    nodePackages.pyright
-    nodePackages.intelephense
-    nodePackages.typescript-language-server
-    nodePackages.vls
-    nodePackages.volar
-
-    lua-language-server
-    libclang
 
     # c compiler
     clang
@@ -225,23 +187,15 @@
     ripgrep
     fd
 
-    tree-sitter
-    nodejs_20
-
     # security scanner
     chkrootkit
     clamav
 
-    # for sddm
-    libsForQt5.qt5.qtquickcontrols2   
-    libsForQt5.qt5.qtgraphicaleffects
-
     # for pdf editor
     xournalpp
+
+    # remote client
     remmina
 
-    rpi-imager
   ];
-
-
 }

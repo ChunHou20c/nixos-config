@@ -7,6 +7,9 @@
 
   imports = [
     ../../home/core.nix
+    ../../home/hyprland
+    ../../home/nvim
+    ../../home/dev-tools
   ];
 
   programs.git = {
