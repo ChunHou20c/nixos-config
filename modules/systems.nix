@@ -1,6 +1,15 @@
-{ pkgs, username, ... }:
+{ pkgs, username, config, ... }:
 {
 
+  programs.nix-ld.enable = true;
+
+  programs.nix-ld.libraries = with pkgs; [
+
+    # Add any missing dynamic libraries for unpackaged programs
+
+    # here, NOT in environment.systemPackages
+
+  ];
   users.users.${username} = {
     isNormalUser = true;
     description = username;
@@ -198,4 +207,19 @@
     remmina
 
   ];
+
+  virtualisation.libvirtd.enable = true;
+  virtualisation.virtualbox.host.enable = true;
+  virtualisation.virtualbox.host.enableExtensionPack = true;
+  virtualisation.spiceUSBRedirection.enable = true;
+
+  users.extraGroups.vboxusers.members = [ "chunhou" ];
+  programs.dconf.enable = true;
+  # Allow unfree packages
+  config.allowUnfree = true;
+  config.permittedInsecurePackages = [
+    "electron-25.8.6"
+    "electron-25.9.0"
+  ];
+
 }
