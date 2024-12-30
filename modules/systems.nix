@@ -1,4 +1,4 @@
-{ pkgs, username, config, ... }:
+{ pkgs, username, ... }:
 {
 
   programs.nix-ld.enable = true;
@@ -99,7 +99,7 @@
     updater.enable = true;
   };
 
-  bluetooth.enable = true;
+  # bluetooth.enable = true;
 
   sound.enable = true;
   hardware.pulseaudio.enable = false;
@@ -216,10 +216,10 @@
   users.extraGroups.vboxusers.members = [ "chunhou" ];
   programs.dconf.enable = true;
   # Allow unfree packages
-  config.allowUnfree = true;
-  config.permittedInsecurePackages = [
-    "electron-25.8.6"
-    "electron-25.9.0"
-  ];
+  # allowUnfree = true;
+  # permittedInsecurePackages = [
+  #   "electron-25.8.6"
+  #   "electron-25.9.0"
+  # ];
 
 }

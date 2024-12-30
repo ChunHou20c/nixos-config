@@ -7,9 +7,6 @@
 
   imports = [
     ../../home/core.nix
-    ../../home/hyprland
-    ../../home/nvim
-    ../../home/dev-tools
   ];
 
   programs.git = {
@@ -17,7 +14,7 @@
     userEmail = "chunhouthatbornin20c@gmail.com";
   };
 
-  packages = with pkgs; [
+  home.packages = with pkgs; [
 
     ferdium
     lazygit

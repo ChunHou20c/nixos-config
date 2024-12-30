@@ -30,7 +30,9 @@
         # Import the previous configuration.nix we used,
         # so the old configuration file still takes effect
         ./hosts/lenovo-ideapad-slim-5i
-        ./users/${username}/home.nix
+        ./users/${username}/nixos.nix
+        ./dev-tools
+        ./nvim
 
         home-manager.nixosModules.home-manager
         {
