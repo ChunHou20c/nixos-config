@@ -1,4 +1,4 @@
-{ pkgs }:
+{pkgs,...}:
 let
   imgLink = "https://w.wallhaven.cc/full/qz/wallhaven-qzo2z7.jpg";
 

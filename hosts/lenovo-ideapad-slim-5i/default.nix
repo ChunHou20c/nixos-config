@@ -1,9 +1,8 @@
-{ pkgs, lib, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports = [
     ../../modules/hyprland.nix
-    ../../modules/sddm-theme.nix
     ../../modules/systems.nix
     ./hardware-configuration.nix
   ];
@@ -17,7 +16,7 @@
     supportedFilesystems = [ "ntfs" ];
     consoleLogLevel = 3;
     initrd.systemd.enable = true;
-    systemd.extraConfig = ''DefaultTimeoutStopSec=6s'';
+    # systemd.extraConfig = ''DefaultTimeoutStopSec=6s'';
     systemd.services.NetworkManager-wait-online.enable = lib.mkForce false;
     kernelPackages = pkgs.linuxPackages_xanmod_stable;
     # kernelPackages = pkgs.linuxPackages_latest;
