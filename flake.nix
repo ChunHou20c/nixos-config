@@ -58,6 +58,23 @@
 
       ];
     };
+
+      minimal = let 
+
+        username = "chunhou";
+        specialArgs = {inherit username;};
+
+      in  nixpkgs.lib.nixosSystem {
+        
+        system = "x86_64-linux";
+        inherit specialArgs;
+        modules = [
+        # Import the previous configuration.nix we used,
+        # so the old configuration file still takes effect
+	./configuration-minimal.nix
+
+      ];
+    };
   };
 };
 }
