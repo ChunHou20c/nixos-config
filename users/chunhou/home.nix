@@ -8,8 +8,10 @@
   imports = [
     ../../home/core.nix
     ../../home/hyprland
+    ../../home/pictures
     ../../home/nixvim
     ../../home/waybar
+    ../../home/swaylock
     nixvim.homeManagerModules.nixvim
   ];
 
