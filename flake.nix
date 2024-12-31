@@ -46,7 +46,6 @@
         ./hosts/lenovo-ideapad-slim-5i
         ./users/${username}/nixos.nix
         ./dev-tools
-        ./nvim
         lanzaboote.nixosModules.lanzaboote
 
         home-manager.nixosModules.home-manager
