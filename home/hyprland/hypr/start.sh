@@ -2,7 +2,7 @@
 
 # initialize swww
 swww init &
-swww img ~/.config/hypr/background/Background/7.jpg
+swww img ~/.config/hypr/background/7.jpg
 
 nm-applet --indicator &
 blueman-applet &
