@@ -1,6 +1,5 @@
 { pkgs, ...}:
 {
-
   programs.nixvim.plugins = {
 
     telescope = {
@@ -9,7 +8,7 @@
 
       "<leader>fg" = "live_grep";
       "<leader>ff" = "find_files";
-      "<leader>fb" = "find_buffers";
+      "<leader>fb" = "buffers";
       "<leader>fh" = "help_tags";
       };
     };

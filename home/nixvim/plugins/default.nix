@@ -5,5 +5,7 @@
     ./treesiter.nix
     ./basics.nix
     ./telescope.nix
+    ./lsp.nix
+    ./cmp.nix
   ];
 }
