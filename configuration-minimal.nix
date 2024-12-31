@@ -11,7 +11,6 @@ in
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./unstable-packages.nix
       ./cachix.nix
       lanzaboote.nixosModules.lanzaboote
     ];
@@ -186,20 +185,7 @@ in
 
   hardware = {
     opengl.enable = true;
-    opengl.driSupport = true;
     opengl.driSupport32Bit = true;
-
-    opengl.extraPackages = with pkgs; [
-        intel-media-driver
-        vaapiVdpau
-        libvdpau-va-gl
-        intel-ocl
-        intel-gmmlib
-        intel-compute-runtime
-      ];
-    bluetooth.enable = true;
-
-  };
 
   services.httpd = {
     enable = true;
@@ -216,7 +202,6 @@ in
   };
 
   # Enable sound with pipewire.
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
