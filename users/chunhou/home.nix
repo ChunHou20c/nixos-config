@@ -26,14 +26,14 @@
     starship
     evince
     mpv
-    gnome.vinagre
+    remmina
     google-chrome
     bottles
     obs-studio
     obsidian
     obs-studio-plugins.wlrobs
     gimp
-    mysql
+    mariadb
   ];
 
   qt = {
