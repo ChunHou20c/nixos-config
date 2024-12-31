@@ -8,6 +8,11 @@
 	clangd.enable = true;
 	gopls.enable = true;
 	nixd.enable = true;
+	rust-analyzer = {
+	enable = true;
+	  installRustc = true;
+	  installCargo = true;
+	};
       };
       keymaps.lspBuf = {
 
@@ -20,7 +25,5 @@
 	"rn" = "rename";
       };
     };
-
-    rustaceanvim.enable = true;
   };
 }
