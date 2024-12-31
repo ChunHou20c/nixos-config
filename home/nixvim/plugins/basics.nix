@@ -19,6 +19,7 @@
     indent-blankline.enable = true;
     commentary.enable = true;
     nvim-autopairs.enable = true;
+    web-devicons.enable = true;
 
   };
 

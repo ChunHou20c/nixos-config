@@ -116,7 +116,9 @@
   };
 
   i18n.inputMethod = {
-      enabled = "fcitx5";
+      type = "fcitx5";
+      enable = true;
+
       fcitx5.addons = with pkgs; [
           # fcitx5-mozc
           fcitx5-gtk
@@ -205,10 +207,10 @@
 
     xdg-desktop-portal-hyprland
     xdg-utils
-    gnome.gnome-keyring
-    gnome.file-roller
-    gnome.adwaita-icon-theme
-    gnome.gnome-themes-extra
+    gnome-keyring
+    file-roller
+    adwaita-icon-theme
+    gnome-themes-extra
     ubuntu_font_family
 
     zip
