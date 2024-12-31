@@ -186,6 +186,7 @@ in
   hardware = {
     opengl.enable = true;
     opengl.driSupport32Bit = true;
+  };
 
   services.httpd = {
     enable = true;
