@@ -37,6 +37,7 @@
     obs-studio-plugins.wlrobs
     gimp
     mariadb
+    osu-lazer-bin
   ];
 
   qt = {
