@@ -1,6 +1,17 @@
 {
   description = "NixOS flake configuration by ChunHou20c";
 
+  nixConfig = {
+    # substituers will be appended to the default substituters when fetching packages
+    # nix com    extra-substituters = [munity's cache server
+    extra-substituters = [
+      "https://nix-community.cachix.org"
+    ];
+    extra-trusted-public-keys = [
+      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+    ];
+  };
+
   inputs = {
     # NixOS official package source, using the nixos-24.11 branch here
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
