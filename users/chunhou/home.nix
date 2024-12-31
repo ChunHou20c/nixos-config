@@ -9,6 +9,7 @@
     ../../home/core.nix
     ../../home/hyprland
     ../../home/nixvim
+    ../../home/waybar
     nixvim.homeManagerModules.nixvim
   ];
 
