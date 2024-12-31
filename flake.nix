@@ -70,6 +70,36 @@
       ];
     };
 
+      acer-aspire-e14 = let 
+
+        username = "chunhou";
+        specialArgs = {inherit username;};
+
+      in  nixpkgs.lib.nixosSystem {
+        
+        system = "x86_64-linux";
+        inherit specialArgs;
+        modules = [
+        # Import the previous configuration.nix we used,
+        # so the old configuration file still takes effect
+        ./hosts/acer-aspire-e14
+        ./users/${username}/nixos.nix
+        # ./dev-tools
+        # lanzaboote.nixosModules.lanzaboote
+
+        home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+
+          home-manager.extraSpecialArgs = inputs // specialArgs;
+          home-manager.users.${username} = import ./users/${username}/home.nix;
+        }
+
+
+      ];
+    };
+
       minimal = let 
 
         username = "chunhou";
