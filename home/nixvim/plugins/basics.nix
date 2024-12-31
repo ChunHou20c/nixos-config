@@ -20,6 +20,6 @@
     commentary.enable = true;
     nvim-autopairs.enable = true;
 
-  }
+  };
 
 }
