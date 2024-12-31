@@ -7,6 +7,9 @@
     ./hardware-configuration.nix
   ];
 
+
+  systemd.services.NetworkManager-wait-online.enable = lib.mkForce false;
+
   #bootloader
   boot = {
 
@@ -17,7 +20,6 @@
     consoleLogLevel = 3;
     initrd.systemd.enable = true;
     # systemd.extraConfig = ''DefaultTimeoutStopSec=6s'';
-    systemd.services.NetworkManager-wait-online.enable = lib.mkForce false;
     kernelPackages = pkgs.linuxPackages_xanmod_stable;
     # kernelPackages = pkgs.linuxPackages_latest;
 
@@ -34,10 +36,13 @@
 
   };
 
-  # boot.lanzaboote = {
-  #   enable = true;
-  #   pkiBundle = "/etc/secureboot";
-  # };
+  boot.lanzaboote = {
+    enable = true;
+    pkiBundle = "/etc/secureboot";
+  };
+
+  services.xserver.enable = true;
+  services.xserver.videoDrivers = [ "intel" ];
 
   security.tpm2.enable = true;
   security.tpm2.pkcs11.enable = true;  # expose /run/current-system/sw/lib/libtpm2_pkcs11.so
@@ -54,6 +59,7 @@
         vaapiVdpau
         libvdpau-va-gl
       ];
+    bluetooth.enable = true;
   };
 
   services.tlp = {

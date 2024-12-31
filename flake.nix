@@ -6,12 +6,20 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v0.4.1";
+
+      # Optional but recommended to limit the size of your system closure.
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs = { 
     self,
     nixpkgs, 
     home-manager, 
+    lanzaboote,
     ... }@inputs: {
 
     nixosConfigurations = {
@@ -23,8 +31,7 @@
 
       in  nixpkgs.lib.nixosSystem {
         
-        # system = "x86_64-linux";
-        system.stateVersion = "24.05"; # Did you read the comment?
+        system = "x86_64-linux";
         inherit specialArgs;
         modules = [
         # Import the previous configuration.nix we used,
@@ -33,7 +40,7 @@
         ./users/${username}/nixos.nix
         ./dev-tools
         ./nvim
-
+        lanzaboote.nixosModules.lanzaboote
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;

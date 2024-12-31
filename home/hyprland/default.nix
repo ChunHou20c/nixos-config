@@ -1,33 +1,27 @@
-{ pkgs, ... }: {
+{
+  pkgs,
+  config,
+  ...
+}: {
+  # i3 配置，基于 https://github.com/endeavouros-team/endeavouros-i3wm-setup
+  # 直接从当前文件夹中读取配置文件作为配置内容
 
-  environment.systemPackages = with pkgs; [
+  # wallpaper, binary file
+  home.file.".config/hypr" = {
+    source = ./hypr;
+    # copy the scripts directory recursively
+    recursive = true;
+  };
 
-    networkmanagerapplet
-    waybar
-    eww
-    dunst
-    libnotify
-    swww
+  # set cursor size and dpi for 4k monitor
+  xresources.properties = {
+    "Xcursor.size" = 16;
+    "Xft.dpi" = 192;
+  };
 
-    lz4
+  # 直接以 text 的方式，在 nix 配置文件中硬编码文件内容
+  # home.file.".xxx".text = ''
+  #     xxx
+  # '';
 
-    wofi
-    ntfs3g
-    imv
-    copyq
-
-    #for eww bar
-    python310
-    ruby
-    jq
-    swaylock-effects
-    swaylock
-    swayidle
-    sway-contrib.grimshot
-
-    # clipboard for wayland
-    wl-clipboard
-    pavucontrol
-    pamixer
-  ];
 }
