@@ -16,72 +16,72 @@
     extraGroups = [ "networkmanager" "wheel"  "libvirtd" "tss" "video"];
   };
 
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-    vimAlias = true;
-    viAlias = true;
+  # programs.neovim = {
+  #   enable = true;
+  #   defaultEditor = true;
+  #   vimAlias = true;
+  #   viAlias = true;
 
-    configure = {
-    customRC = '''';
-      packages.myVimPackage = with pkgs.vimPlugins; {
-        start = [ 
+  #   configure = {
+  #   customRC = '''';
+  #     packages.myVimPackage = with pkgs.vimPlugins; {
+  #       start = [ 
 
-          # comment out lines
-          vim-commentary
-          # floating terminal
-          vim-floaterm
+  #         # comment out lines
+  #         vim-commentary
+  #         # floating terminal
+  #         vim-floaterm
 
-          gitsigns-nvim
-          vim-nix
-          indent-blankline-nvim
-          nvim-treesitter-parsers.wgsl
-          nvim-treesitter-parsers.wgsl_bevy
+  #         gitsigns-nvim
+  #         vim-nix
+  #         indent-blankline-nvim
+  #         nvim-treesitter-parsers.wgsl
+  #         nvim-treesitter-parsers.wgsl_bevy
 
-          # eye candy
-	  nvim-treesitter.withAllGrammars
-          lualine-nvim
+  #         # eye candy
+	  # nvim-treesitter.withAllGrammars
+  #         lualine-nvim
 
-          # for file explorer
-	  nvim-tree-lua
-          nvim-web-devicons
+  #         # for file explorer
+	  # nvim-tree-lua
+  #         nvim-web-devicons
 
-          # for extra themes
-          tokyonight-nvim
+  #         # for extra themes
+  #         tokyonight-nvim
           
-          # lazygit
-          lazygit-nvim
+  #         # lazygit
+  #         lazygit-nvim
 
-          # lsp
-          nvim-lspconfig
-          nvim-cmp
-          cmp-nvim-lsp
-          luasnip
-          cmp-nvim-lsp-signature-help
-          cmp_luasnip
-          friendly-snippets
-          lspkind-nvim
+  #         # lsp
+  #         nvim-lspconfig
+  #         nvim-cmp
+  #         cmp-nvim-lsp
+  #         luasnip
+  #         cmp-nvim-lsp-signature-help
+  #         cmp_luasnip
+  #         friendly-snippets
+  #         lspkind-nvim
 
-          # telescope
-          telescope-nvim
+  #         # telescope
+  #         telescope-nvim
 
-          # profiling
-          vim-startuptime
+  #         # profiling
+  #         vim-startuptime
 
-          # tagbar
-          tagbar
+  #         # tagbar
+  #         tagbar
 
-          # autopair and autotag
-          nvim-ts-autotag
-          nvim-autopairs
-          autoclose-nvim
-          nvim-surround
-          # rest-nvim
-          plenary-nvim
-        ];
-      }; 
-    };
-  };
+  #         # autopair and autotag
+  #         nvim-ts-autotag
+  #         nvim-autopairs
+  #         autoclose-nvim
+  #         nvim-surround
+  #         # rest-nvim
+  #         plenary-nvim
+  #       ];
+  #     }; 
+  #   };
+  # };
 
   nix.settings.trusted-users = [username];
 
