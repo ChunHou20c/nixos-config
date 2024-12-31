@@ -3,13 +3,6 @@
 
   programs.nix-ld.enable = true;
 
-  programs.nix-ld.libraries = with pkgs; [
-
-    # Add any missing dynamic libraries for unpackaged programs
-
-    # here, NOT in environment.systemPackages
-
-  ];
   users.users.${username} = {
     isNormalUser = true;
     description = username;
@@ -80,7 +73,7 @@
   #         plenary-nvim
   #       ];
   #     }; 
-  #   };
+ #   };
   # };
 
   nix.settings.trusted-users = [username];
@@ -168,7 +161,6 @@
 
   # bluetooth.enable = true;
 
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
