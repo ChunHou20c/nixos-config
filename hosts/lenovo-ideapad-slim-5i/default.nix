@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ pkgs, lib, ... }:
 
 {
   imports = [
@@ -50,10 +50,10 @@
   networking.hostName = "nixos"; # Define your hostname.
 
   hardware = {
-    opengl.enable = true;
-    opengl.driSupport32Bit = true;
+    graphics.enable = true;
+    graphics.enable32Bit = true;
 
-    opengl.extraPackages = with pkgs; [
+    graphics.extraPackages = with pkgs; [
         intel-media-driver
         vaapiVdpau
         libvdpau-va-gl
