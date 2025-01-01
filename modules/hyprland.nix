@@ -6,8 +6,6 @@
   };
 
   programs.thunar.enable = true;
-  programs.steam.enable = true;
-  # programs.steam.package = pkgs.old-packages.steam;
   
   programs.thunar.plugins = with pkgs.xfce; [
     thunar-archive-plugin
