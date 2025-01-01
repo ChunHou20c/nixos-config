@@ -4,6 +4,7 @@
   imports = [
     ../../modules/hyprland.nix
     ../../modules/systems.nix
+    ../../modules/gaming.nix
     ./hardware-configuration.nix
   ];
 
