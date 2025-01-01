@@ -12,6 +12,8 @@
     ../../home/nixvim
     ../../home/waybar
     ../../home/swaylock
+    ../../home/starship
+    ../../home/kitty
     nixvim.homeManagerModules.nixvim
   ];
 
