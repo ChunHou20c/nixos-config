@@ -167,9 +167,6 @@
     zellij
     tmux
 
-    lutris  
-    gamemode
-    gamescope
 
     ffmpeg
 
