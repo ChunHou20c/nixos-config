@@ -5,6 +5,8 @@
     # for tidying html output
     aseprite
     ldtk
+    gimp
+    obs-studio
 
   ];
 }
