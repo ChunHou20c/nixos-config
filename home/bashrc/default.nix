@@ -1,3 +1,3 @@
 {
-  home.file.".config/.bashrc".source = ./bashrc;
+  home.file.".bashrc".source = ./bashrc;
 }
