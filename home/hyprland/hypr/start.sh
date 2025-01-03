@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
 # initialize swww
-swww init &
+swww-daemon &
 swww img ~/.config/hypr/background/7.jpg
+
+eww daemon &
 
 nm-applet --indicator &
 blueman-applet &
