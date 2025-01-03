@@ -27,6 +27,9 @@
 
   environment.systemPackages = with pkgs; [
 
+    brightnessctl
+    hyprlock
+    hypridle
     networkmanagerapplet
     waybar
     eww
