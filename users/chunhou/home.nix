@@ -58,6 +58,8 @@
       theme.package = pkgs.tokyo-night-gtk;
       theme.name = "Tokyonight-Storm-B";
 
+      cursorTheme.name = "capitaine-cursors";
+      cursorTheme.package = pkgs.capitaine-cursors;
     };
 
   dconf.settings = {
