@@ -341,4 +341,16 @@ tooltip label {
     margin: 0.2em;
 }
 
+menu {
+  padding: 5px;
+  background-color: $background;
+  color: #fff;
 
+  menuitem {
+    border-radius: 5px;
+    padding: 8px 12px;
+  }
+  menuitem:hover {
+    background-color: $blue;
+  }
+}
