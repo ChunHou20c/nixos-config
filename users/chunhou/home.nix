@@ -10,7 +10,7 @@
     ../../home/hyprland
     ../../home/pictures
     ../../home/nixvim
-    ../../home/waybar
+    ../../home/eww
     ../../home/swaylock
     ../../home/starship
     ../../home/kitty
@@ -23,7 +23,6 @@
     userName = "ChunHou20c";
     userEmail = "chunhouthatbornin20c@gmail.com";
   };
-
 
   home.packages = with pkgs; [
 
