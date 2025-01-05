@@ -44,7 +44,7 @@
   qt = {
     enable = true;
     platformTheme.name = "gtk";
-    style.name = "Tokyonight-Storm-B";
+    style.name = "Tokyonight-Dark";
     style.package = pkgs.tokyo-night-gtk;
   };
 
@@ -56,7 +56,7 @@
       iconTheme.name = "Papirus-Dark";
 
       theme.package = pkgs.tokyo-night-gtk;
-      theme.name = "Tokyonight-Storm-B";
+      theme.name = "Tokyonight-Dark";
 
       cursorTheme.name = "capitaine-cursors";
       cursorTheme.package = pkgs.capitaine-cursors;
