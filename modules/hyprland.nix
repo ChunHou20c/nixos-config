@@ -28,6 +28,7 @@
   environment.systemPackages = with pkgs; [
 
     brightnessctl
+    alsa-utils
     hyprlock
     hypridle
     networkmanagerapplet

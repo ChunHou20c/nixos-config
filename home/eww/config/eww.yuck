@@ -1,0 +1,2 @@
+(include "./windows/power_menu/eww.yuck")
+(include "./windows/status_bar/eww.yuck")
