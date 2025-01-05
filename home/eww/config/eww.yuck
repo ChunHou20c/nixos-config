@@ -1,2 +1,3 @@
-(include "./windows/power_menu/eww.yuck")
-(include "./windows/status_bar/eww.yuck")
+(include "./modules/vars.yuck")
+(include "./modules/powermenu.yuck")
+(include "./modules/status_bar.yuck")

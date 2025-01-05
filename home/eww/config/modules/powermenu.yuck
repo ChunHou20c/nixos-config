@@ -1,12 +1,4 @@
-(defpoll time :interval "5s"
-  :initial `date +'{"hour":"%H","min":"%M"}'`
-  `date +'{"hour":"%H","min":"%M"}'`)
-
-(defpoll net :interval "100s"
-  :initial `N/A`
-  `nmcli -t -f SIGNAL,ACTIVE,SSID device wifi \
-    | awk -F':' '{if($2=="yes")printf "{\\"ssid\\":\\"%s\\",\\"signal\\":\\"%d\\"}", $3, $1}'`)
-
+;; main window
 (defwindow powermenu
   :monitor 0 ;; Optional for X11
   :stacking "fg"
@@ -17,8 +9,9 @@
               :height "100%"
 	    )
     (powermenu_layout)
-  )
+)
 
+;; main layout
 (defwidget powermenu_layout [] (
 
   box :class "layout_box" :space-evenly false :orientation "vertical"
