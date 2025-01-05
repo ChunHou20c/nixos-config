@@ -1,6 +1,6 @@
-(defpoll time :interval "5s"
-  :initial `date +'{"hour":"%H","min":"%M"}'`
-  `date +'{"hour":"%H","min":"%M"}'`)
+(defpoll time :interval "5s" `date +'{"hour":"%H","min":"%M"}'`)
+
+(defpoll current_date :interval "5s" `date +'{"day":"%d","month":"%m","year":"%Y"}'`)
 
 (defpoll net :interval "100s"
   :initial `N/A`

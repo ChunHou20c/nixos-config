@@ -55,7 +55,7 @@
      (label :text "")
     )
   )
-  (wifi)
+  (systray :orientation "h" :spacing 15 :space-evenly true :icon-size 20)
   (bright)
   (volume)
   (label :class "bar_sep" :text "|")
@@ -67,6 +67,7 @@
 )
 
 (defwidget clock_module []
+
   (eventbox :onhover "eww update time_rev=true"
     :onhoverlost "eww update time_rev=false"
     (box :class "module" :space-evenly "false" :orientation "h" :spacing "10" 
@@ -286,9 +287,11 @@
   (box :class "cal" :orientation "v"
     (box :class "cal-in"
       (calendar :class "cal" 
-	:day 20 
-	:year 2025
+	:day "${current_date.day}" 
+	:month "${current_date.month}"
+	:year "${current_date.year}"
       )
     )
   )
 )
+
