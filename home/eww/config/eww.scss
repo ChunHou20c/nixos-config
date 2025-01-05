@@ -4,6 +4,7 @@ $surface-lightgrey: #3d464e;
 $surface-grey: #2b3238;
 $surface-red: #f87070;
 $surface-black: #040409;
+$background-color: #0f0f17;
 
 * { all: unset; }
 
@@ -159,7 +160,7 @@ $surface-black: #040409;
 
 .cal {
   border-radius: 0.4em;
-  background-color: #0f0f17;
+  background-color: $background-color;
   font-family: JetBrainsMono Nerd Font;
   font-size: 1.0em;
   font-weight: normal;
@@ -342,15 +343,17 @@ tooltip label {
 }
 
 menu {
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 1.0em;
   padding: 5px;
-  background-color: $background;
+  background-color: $background-color;
   color: #fff;
 
   menuitem {
     border-radius: 5px;
-    padding: 8px 12px;
+    padding: 4px 6px;
   }
   menuitem:hover {
-    background-color: $blue;
+    background-color: $surface-red;
   }
 }
