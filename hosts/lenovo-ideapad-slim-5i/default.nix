@@ -5,6 +5,7 @@
     ../../modules/hyprland.nix
     ../../modules/systems.nix
     ../../modules/gaming.nix
+    ../../modules/media.nix
     ./hardware-configuration.nix
   ];
 
