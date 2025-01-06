@@ -15,6 +15,7 @@
     ../../home/starship
     ../../home/kitty
     ../../home/bashrc
+    ../../home/fcitx5
     nixvim.homeManagerModules.nixvim
   ];
 

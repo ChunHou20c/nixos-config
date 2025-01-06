@@ -27,6 +27,8 @@
 
   environment.systemPackages = with pkgs; [
 
+    #fcitx5 theming
+    catppuccin-fcitx5
     brightnessctl
     alsa-utils
     hyprlock
