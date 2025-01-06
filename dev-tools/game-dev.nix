@@ -6,7 +6,6 @@
     aseprite
     ldtk
     gimp
-    obs-studio
 
   ];
 }

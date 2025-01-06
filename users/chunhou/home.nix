@@ -37,7 +37,6 @@
     google-chrome
     bottles
     obsidian
-    obs-studio-plugins.wlrobs
     mariadb
   ];
 
