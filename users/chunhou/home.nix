@@ -14,7 +14,6 @@
     ../../home/swaylock
     ../../home/starship
     ../../home/kitty
-    ../../home/bashrc
     ../../home/fcitx5
     nixvim.homeManagerModules.nixvim
   ];
@@ -23,6 +22,21 @@
     enable = true;
     userName = "ChunHou20c";
     userEmail = "chunhouthatbornin20c@gmail.com";
+  };
+
+  programs.bash = {
+
+    enable = true;
+    bashrcExtra = ''
+      eval "$(starship init bash)"
+      alias ls="exa"
+    '';
+  };
+
+  xdg = {
+    enable = true;
+    userDirs.createDirectories = true;
+    userDirs.enable = true;
   };
 
   home.packages = with pkgs; [
