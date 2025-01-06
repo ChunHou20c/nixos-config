@@ -357,3 +357,12 @@ menu {
     background-color: $surface-red;
   }
 }
+
+calendar {
+
+  &:selected {
+    color: $surface-red;
+    border-radius: 0.2em;
+  }
+
+}
