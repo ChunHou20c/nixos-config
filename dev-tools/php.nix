@@ -2,8 +2,8 @@
 
   environment.systemPackages = with pkgs; [
 
-    php
     phpactor
+    postman
 
   ];
 }
