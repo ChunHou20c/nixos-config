@@ -9,6 +9,10 @@
     ./hardware-configuration.nix
   ];
 
+  services.mysql = {
+    enable = true;
+    package = pkgs.mariadb;
+  };
 
   systemd.services.NetworkManager-wait-online.enable = lib.mkForce false;
 

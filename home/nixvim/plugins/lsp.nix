@@ -1,4 +1,4 @@
-{ ...}:
+{pkgs, ...}:
 {
   programs.nixvim.plugins = {
     lsp = {
@@ -8,6 +8,9 @@
 	clangd.enable = true;
 	gopls.enable = true;
 	nixd.enable = true;
+	phpactor.enable = true;
+	intelephense.enable = true;
+	intelephense.package = pkgs.intelephense;
 	rust_analyzer = {
 	enable = true;
 	  installRustc = true;
