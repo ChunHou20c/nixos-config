@@ -9,8 +9,6 @@
 	gopls.enable = true;
 	nixd.enable = true;
 	phpactor.enable = true;
-	intelephense.enable = true;
-	intelephense.package = pkgs.intelephense;
 	rust_analyzer = {
 	enable = true;
 	  installRustc = true;
