@@ -8,5 +8,6 @@ eww open status_bar
 
 nm-applet --indicator &
 blueman-applet &
+swaync &
 
 copyq --start-server &

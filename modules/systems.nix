@@ -127,6 +127,7 @@
 
   environment.systemPackages = with pkgs; [
 
+    nixfmt-rfc-style
     tpm2-tss
     xfce.thunar
     niv
@@ -187,8 +188,6 @@
     wineWowPackages.waylandFull
 
     git
-    rustup
-
     # c compiler
     clang
 
