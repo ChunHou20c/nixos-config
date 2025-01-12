@@ -36,7 +36,8 @@
     networkmanagerapplet
     waybar
     eww
-    dunst
+    # dunst
+    swaynotificationcenter
     libnotify
     swww
 

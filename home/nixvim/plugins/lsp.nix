@@ -9,10 +9,14 @@
 	gopls.enable = true;
 	nixd.enable = true;
 	phpactor.enable = true;
+	volar.enable = true;
+	ts_ls.enable = true;
+	nil_ls.enable = true;
+	volar.tslsIntegration = false;
 	rust_analyzer = {
 	enable = true;
-	  installRustc = true;
-	  installCargo = true;
+	  installRustc = false;
+	  installCargo = false;
 	};
       };
       keymaps.lspBuf = {
