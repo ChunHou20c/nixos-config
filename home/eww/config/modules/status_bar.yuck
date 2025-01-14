@@ -55,7 +55,7 @@
      (label :text "")
     )
   )
-  (systray :orientation "h" :spacing 15 :space-evenly true :icon-size 16)
+  (systray :orientation "h" :spacing 20 :space-evenly true :icon-size 16)
   (bright)
   (volume)
   (label :class "bar_sep" :text "|")
@@ -294,4 +294,5 @@
     )
   )
 )
+
 

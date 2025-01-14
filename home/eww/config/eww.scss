@@ -199,7 +199,7 @@ $background-color: #0f0f17;
 .bright_icon {
     font-size: 1.2em;
     color: #e4c9af;
-  margin: 0px 10px 0px 10px;
+  margin: 0px 10px 0px 15px;
 }
 
 .bat_module {
@@ -346,6 +346,7 @@ menu {
   font-family: JetBrainsMono Nerd Font;
   font-size: 1.0em;
   padding: 5px;
+  border-radius: 5px;
   background-color: $background-color;
   color: #fff;
 
@@ -366,3 +367,4 @@ calendar {
   }
 
 }
+
