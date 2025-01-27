@@ -6,7 +6,7 @@
   users.users.${username} = {
     isNormalUser = true;
     description = username;
-    extraGroups = [ "networkmanager" "wheel"  "libvirtd" "tss" "video"];
+    extraGroups = [ "networkmanager" "wheel"  "libvirtd" "tss" "video" "scanner" "lp"];
   };
 
 
@@ -31,6 +31,20 @@
   # Enable networking
   networking.networkmanager.enable = true;
   programs.light.enable = true;
+  programs.fzf.keybindings = true;
+  programs.fzf.fuzzyCompletion = true;
+
+  programs.tmux = {
+  
+    enable = true;
+    plugins = [ pkgs.tmuxPlugins.tokyo-night-tmux ];
+    keyMode = "vi";
+    shortcut = "a";
+    extraConfig = ''
+    set-option -g status-position top
+    set-option -s escape-time 10
+    '';
+  };
   # time zone.
   time.timeZone = "Asia/Kuala_Lumpur";
 
@@ -95,6 +109,12 @@
     enable = true;
     nssmdns4 = true;
     openFirewall = true;
+    nssmdns = true;
+    publish = {
+      enable = true;
+      addresses = true;
+      userServices = true;
+    };
   };
 
   services.clamav = {
@@ -143,6 +163,7 @@
     neofetch
     virt-manager
     socat 
+    simple-scan
 
     # for neovim tagbar
     universal-ctags
@@ -173,9 +194,6 @@
     wireguard-tools
     # terminal multiplexer
     zellij
-    tmux
-
-
     ffmpeg
 
     # for sddm
