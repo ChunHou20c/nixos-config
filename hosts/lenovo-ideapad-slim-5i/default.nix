@@ -66,6 +66,8 @@
 	vpl-gpu-rt
       ];
     bluetooth.enable = true;
+    sane.enable = true;
+    sane.extraBackends = [ pkgs.hplipWithPlugin ];
   };
 
   services.tlp = {

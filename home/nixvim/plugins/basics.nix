@@ -20,6 +20,8 @@
     commentary.enable = true;
     nvim-autopairs.enable = true;
     web-devicons.enable = true;
+    friendly-snippets.enable = true;
+    copilot-vim.enable = true;
 
   };
 

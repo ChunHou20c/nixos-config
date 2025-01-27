@@ -11,7 +11,6 @@
     (box :class "bar_layout" :space-evenly true :orientation "horizontal"
       :vexpand true :hexpand true 
       (workspace_widget)
-      (window_title_widget)
       (right_tray)
     )
   )
@@ -24,6 +23,11 @@
     :halign "start"
     :spacing 2
 
+    (eventbox :class "workspace_button"
+	(box :class "workspace_entry_normal" 
+     (label :class "nix_text" :text "")
+     )
+     )
     (label :text "${current_workspace}" :visible false) ;; this line make sure the current_workspace variable get updated else it will stuck at the same number
     (for workspace in workspaces
       (eventbox :class "workspace_button" :onclick "hyprctl dispatch workspace ${workspace.id}"
@@ -50,11 +54,6 @@
     :space-evenly false 
     :halign "end" 
     :spacing 5
-  (eventbox :class "idle_inhibitor_button"
-    (box :class "idle_inhibitor_box"
-     (label :text "")
-    )
-  )
   (systray :orientation "h" :spacing 20 :space-evenly true :icon-size 16)
   (bright)
   (volume)

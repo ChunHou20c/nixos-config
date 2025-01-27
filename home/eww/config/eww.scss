@@ -149,6 +149,7 @@ $background-color: #0f0f17;
   padding-top: 0.4em;
   padding-bottom: 0.4em;
   color: $surface-red;
+  background-color: #424242;
 
 }
 
@@ -265,6 +266,13 @@ $background-color: #0f0f17;
 	font-size : 26px;
 	font-weight : bold;
 	margin: 20px 0px 0px 0px;
+}
+
+.nix_text {
+	color: #c3ebeb;
+	font-size : 1.2em;
+	font-weight : bold;
+        padding-right : 0.35em;
 }
 
 .speaker_bar scale trough highlight {
