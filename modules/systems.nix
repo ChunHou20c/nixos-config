@@ -6,7 +6,7 @@
   users.users.${username} = {
     isNormalUser = true;
     description = username;
-    extraGroups = [ "networkmanager" "wheel"  "libvirtd" "tss" "video" "scanner" "lp"];
+    extraGroups = [ "networkmanager" "wheel"  "libvirtd" "tss" "video" "scanner" "lp" "dialout"];
   };
 
 
@@ -31,8 +31,6 @@
   # Enable networking
   networking.networkmanager.enable = true;
   programs.light.enable = true;
-  programs.fzf.keybindings = true;
-  programs.fzf.fuzzyCompletion = true;
 
   programs.tmux = {
   
@@ -164,6 +162,7 @@
     virt-manager
     socat 
     simple-scan
+    bat
 
     # for neovim tagbar
     universal-ctags

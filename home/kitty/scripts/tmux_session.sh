@@ -18,7 +18,7 @@ if find "$option" -maxdepth 1 -type f -name "flake.nix" | grep -q .; then
     tmux new-session -As "$(basename "$option")" -c "$option" nix develop "$option"#dev --command nvim
   else 
     echo "no shell name dev found, entering normal dev shell..."
-    nvim
+    tmux new-session -As "$(basename "$option")" -c "$option" "nvim"
   fi
 else
     echo "no flake.nix found, continue with normal shell..."
