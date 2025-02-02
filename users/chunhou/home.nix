@@ -54,6 +54,19 @@
     mariadb
   ];
 
+   programs.fzf = {
+      enable = true;
+      enableZshIntegration = true;
+      enableBashIntegration = true;
+      defaultOptions = [
+        "--info=inline"
+        "--border=rounded"
+        "--margin=1"
+        "--padding=1" 
+	"--layout=reverse"
+      ];
+   };
+
   qt = {
     enable = true;
     platformTheme.name = "gtk";

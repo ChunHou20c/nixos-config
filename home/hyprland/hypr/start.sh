@@ -2,7 +2,7 @@
 
 # initialize swww
 swww-daemon &
-swww img ~/.config/hypr/background/7.jpg
+swww img ~/.config/hypr/background/9.jpg
 
 eww open status_bar
 

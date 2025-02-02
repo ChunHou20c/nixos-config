@@ -14,9 +14,12 @@
 	nil_ls.enable = true;
 	volar.tslsIntegration = false;
 	rust_analyzer = {
-	enable = true;
+	  enable = true;
 	  installRustc = false;
 	  installCargo = false;
+	  settings = {
+	    checkOnSave = false;
+	  };
 	};
       };
       keymaps.lspBuf = {

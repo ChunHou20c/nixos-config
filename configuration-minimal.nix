@@ -225,7 +225,7 @@ in
   users.users.chunhou = {
     isNormalUser = true;
     description = "chunhou";
-    extraGroups = [ "networkmanager" "wheel"  "libvirtd" "tss" "video"];
+    extraGroups = [ "networkmanager" "wheel"  "libvirtd" "tss" "video" "dialout"];
 
     };
   
