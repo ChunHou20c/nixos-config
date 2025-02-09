@@ -11,7 +11,11 @@
 
   services.mysql = {
     enable = true;
-    package = pkgs.mariadb;
+    package = pkgs.mysql84;
+    settings = {
+      mysqld.plugin-load-add = [ "mysql_native_password" "ed25519=auth_ed25519" ];
+      mysqld.mysql_native_password = "ON";
+    };
   };
 
   systemd.services.NetworkManager-wait-online.enable = lib.mkForce false;
