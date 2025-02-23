@@ -2,7 +2,7 @@
 
 # initialize swww
 swww-daemon &
-swww img ~/.config/hypr/background/9.jpg
+swww restore
 
 eww open status_bar
 
