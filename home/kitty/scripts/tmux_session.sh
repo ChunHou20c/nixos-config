@@ -11,7 +11,7 @@ enter_devshell(){
 	fi
 }
 
-option=$(find ~/Dev/ -mindepth 1 -maxdepth 1 -type d | fzf)
+option=$(find ~/Dev/ ~/Dev/work/tool/ -mindepth 1 -maxdepth 1 -type d | fzf)
 if find "$option" -maxdepth 1 -type f -name "flake.nix" | grep -q .; then
   if nix flake show "$option" | grep -q "dev"; then
     echo "found flake.nix, entering development shell..."
