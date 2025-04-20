@@ -9,6 +9,10 @@
 	gopls.enable = true;
 	nixd.enable = true;
 	phpactor.enable = true;
+	html = {
+	  enable = true;
+	  filetypes = ["html"  "php"];
+	};
 	volar.enable = true;
 	ts_ls.enable = true;
 	nil_ls.enable = true;
