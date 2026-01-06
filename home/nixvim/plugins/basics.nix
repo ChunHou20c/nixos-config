@@ -13,8 +13,8 @@
     telescope.enable = true;
     floaterm = {
       enable = true;
-      width = 0.9;
-      height = 0.9;
+      settings.width = 0.9;
+      settings.height = 0.9;
     };
     indent-blankline.enable = true;
     commentary.enable = true;

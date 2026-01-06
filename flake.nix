@@ -12,28 +12,29 @@
 
   inputs = {
     # NixOS official package source, using the nixos-24.11 branch here
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.11";
+      url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    cursor.url = "github:omarcresp/cursor-flake/main";
 
     lanzaboote = {
-      url = "github:nix-community/lanzaboote/v0.4.1";
+      url = "github:nix-community/lanzaboote/v0.4.2";
 
       # Optional but recommended to limit the size of your system closure.
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nixvim = {
-      url = "github:nix-community/nixvim/nixos-24.11";
+      url = "github:nix-community/nixvim/nixos-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
   };
 
-  outputs = { nixpkgs, home-manager, lanzaboote, nixpkgs-unstable, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, lanzaboote, nixpkgs-unstable, cursor, ... }@inputs: {
 
     nixosConfigurations = {
 
@@ -69,6 +70,9 @@
             home-manager.users.${username} =
               import ./users/${username}/home.nix;
           }
+	  {
+	    environment.systemPackages = [ cursor.packages.${pkgs-unstable.system}.default ];
+	  }
 
         ];
       };

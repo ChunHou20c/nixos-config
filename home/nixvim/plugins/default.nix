@@ -7,5 +7,6 @@
     ./telescope.nix
     ./lsp.nix
     ./cmp.nix
+    ./flutter.nix
   ];
 }
