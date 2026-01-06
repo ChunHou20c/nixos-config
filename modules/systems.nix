@@ -103,11 +103,12 @@
     enable = true;
   };
 
+  services.flatpak.enable = true;
+
   services.avahi = {
     enable = true;
     nssmdns4 = true;
     openFirewall = true;
-    nssmdns = true;
     publish = {
       enable = true;
       addresses = true;
@@ -122,7 +123,7 @@
 
   # bluetooth.enable = true;
 
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -144,6 +145,12 @@
 
   environment.systemPackages = with pkgs; [
 
+    scribus
+    android-studio
+    vscode
+    strongswan
+    uv
+
     nixfmt-rfc-style
     tpm2-tss
     xfce.thunar
@@ -162,6 +169,7 @@
     socat 
     simple-scan
     bat
+    ghidra
 
     # for neovim tagbar
     universal-ctags
@@ -225,12 +233,11 @@
 
   fonts.fontDir.enable = true;
   fonts.packages = with pkgs; [  
-	  nerdfonts
 	  font-awesome
 	  google-fonts
           vistafonts
           corefonts
-  ];
+  ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
   virtualisation.libvirtd.enable = true;
   #virtualisation.virtualbox.host.enable = true;
@@ -241,9 +248,9 @@
   programs.dconf.enable = true;
   # Allow unfree packages
   # allowUnfree = true;
-  # permittedInsecurePackages = [
-  #   "electron-25.8.6"
-  #   "electron-25.9.0"
-  # ];
+  nixpkgs.config.permittedInsecurePackages = [
+     "beekeeper-studio-5.1.5"
+  ];
+  nixpkgs.config.android_sdk.accept_license = true;
 
 }

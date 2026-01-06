@@ -30,6 +30,7 @@
     bashrcExtra = ''
       eval "$(starship init bash)"
       alias ls="exa"
+      export PATH="$HOME/.local/bin:$HOME/.npm-packages/bin:$PATH"
     '';
   };
 
@@ -52,6 +53,7 @@
     bottles
     obsidian
     mariadb
+    redis
   ];
 
    programs.fzf = {

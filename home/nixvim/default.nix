@@ -6,6 +6,7 @@
     ./keymaps.nix
   ];
   programs.nixvim = {
+    nixpkgs.config.allowUnfree = true; # Allow unfree packages in nixvim
     enable = true;
     viAlias = true;
     vimAlias = true;

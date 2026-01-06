@@ -19,7 +19,6 @@
       action = ":LazyGit<CR>";
     }
     {
-
       mode = "n";
       key = "<F12>";
       options.silent = true;
@@ -31,6 +30,18 @@
       key = "<F12>";
       options.silent = true;
       action = "<C-\\><C-n>:FloatermToggle<CR>";
+    }
+    {
+      mode = "n";
+      key = "<F11>";
+      options.silent = true;
+      action = ":FloatermNew<CR>";
+    }
+    {
+      mode = "t";
+      key = "<F11>";
+      options.silent = true;
+      action = "<C-\\><C-n>:FloatermNext<CR>";
     }
     ];
   };
