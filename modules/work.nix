@@ -26,6 +26,7 @@ let
     { name = "verifier"; port = 8012; entry = "/public";}
     { name = "message"; port = 8008; entry = "";}
     { name = "campaignV2"; port = 8017; repo_name = "campaign_v2"; entry = ""; }
+    { name = "tereakood_generator"; port = 8090; repo_name = "tereakood_generator"; entry = "/public"; php_version = "8.4"; }
   ];
 
   koodserver = {
@@ -86,7 +87,6 @@ let
       };
     };
   };
-
   
   wordpress_vhost = {
     name = "wordpress.local";
@@ -187,14 +187,14 @@ let
       value = {
 	user = app;
 	settings = if (php_backend.with_curl or false) then phpfpm_setting_with_curl else phpfpm_setting;
-	phpPackage = nixpkgs_22_05.php74;
+	phpPackage = if (php_backend.php_version or false == "8.4") then pkgs.php84 else nixpkgs_22_05.php74;
       };
   }) php_backends) ++ [ wordpress_phpfpm playground_phpfpm ];
 
 in
 {
 
-  system.activationScripts.${app} = pkgs.lib.stringAfter [ "users" ]
+  system.activationScripts.${app} = pkgs.lib.stringAfter [ app ]
     ''
       chmod g+rwx ${dataDir}
     '';
