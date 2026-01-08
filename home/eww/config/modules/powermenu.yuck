@@ -50,7 +50,7 @@
     (label :text "|" :class "sep")
     (network :ssid "${net.ssid}" :strength "${net.signal}" :offline "󰤭" :excellent "󰤨" :good "󰤥" :okay "󰤢" :slow "󰤟")
     (label :text "|" :class "sep")
-    (battery :capacity {EWW_BATTERY.BAT1.capacity} :status {EWW_BATTERY.BAT1.status} 
+    (battery :capacity {EWW_BATTERY.BAT0.capacity} :status {EWW_BATTERY.BAT0.status} 
       :charge_icon "󰂄" 
       :one "󰂂" :two "󰂁" :three "󰂀" :four "󰁿" :five "󰁾" 
       :six "󰁽" :seven "󰁼" :eight "󰁻" :nine "󰁺")
