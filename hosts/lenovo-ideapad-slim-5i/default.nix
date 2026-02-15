@@ -18,9 +18,7 @@
     };
   };
 
-  services.logind.extraConfig = ''
-  HandlePowerKey=ignore
-  '';
+  services.logind.settings.Login.PowerKey = "ignore";
   systemd.services.NetworkManager-wait-online.enable = lib.mkForce false;
 
   #bootloader
@@ -68,7 +66,7 @@
 
     graphics.extraPackages = with pkgs; [
         intel-media-driver
-        vaapiVdpau
+        libva-vdpau-driver
         libvdpau-va-gl
 	vpl-gpu-rt
       ];

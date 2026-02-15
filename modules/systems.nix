@@ -75,7 +75,7 @@
       fcitx5.addons = with pkgs; [
           # fcitx5-mozc
           fcitx5-gtk
-          fcitx5-chinese-addons
+          qt6Packages.fcitx5-chinese-addons
 	  fcitx5-rime
           libsForQt5.fcitx5-qt
 
@@ -180,7 +180,7 @@
     file-roller
     adwaita-icon-theme
     gnome-themes-extra
-    ubuntu_font_family
+    ubuntu-classic
 
     zip
     unzip
@@ -220,7 +220,6 @@
     fd
 
     # security scanner
-    chkrootkit
     clamav
 
     # for pdf editor
@@ -235,7 +234,7 @@
   fonts.packages = with pkgs; [  
 	  font-awesome
 	  google-fonts
-          vistafonts
+          vista-fonts
           corefonts
   ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
@@ -249,7 +248,7 @@
   # Allow unfree packages
   # allowUnfree = true;
   nixpkgs.config.permittedInsecurePackages = [
-     "beekeeper-studio-5.1.5"
+     "beekeeper-studio-5.3.4"
   ];
   nixpkgs.config.android_sdk.accept_license = true;
 

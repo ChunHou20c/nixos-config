@@ -73,7 +73,7 @@
     enable = true;
     platformTheme.name = "gtk";
     style.name = "Tokyonight-Dark";
-    style.package = pkgs.tokyo-night-gtk;
+    style.package = pkgs.tokyonight-gtk-theme;
   };
 
   gtk = {
@@ -83,7 +83,7 @@
       iconTheme.package = pkgs.papirus-icon-theme;
       iconTheme.name = "Papirus-Dark";
 
-      theme.package = pkgs.tokyo-night-gtk;
+      theme.package = pkgs.tokyonight-gtk-theme;
       theme.name = "Tokyonight-Dark";
 
       cursorTheme.name = "capitaine-cursors";
