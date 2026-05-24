@@ -18,7 +18,6 @@
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    cursor.url = "github:omarcresp/cursor-flake/main";
 
     lanzaboote = {
       url = "github:nix-community/lanzaboote/v1.0.0";
@@ -34,7 +33,7 @@
 
   };
 
-  outputs = { nixpkgs, home-manager, lanzaboote, nixpkgs-unstable, cursor, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, lanzaboote, nixpkgs-unstable, ... }@inputs: {
 
     nixosConfigurations = {
 
@@ -70,9 +69,6 @@
             home-manager.users.${username} =
               import ./users/${username}/home.nix;
           }
-	  {
-	    environment.systemPackages = [ cursor.packages.${pkgs-unstable.system}.default ];
-	  }
 
         ];
       };

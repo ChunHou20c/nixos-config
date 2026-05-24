@@ -51,7 +51,6 @@
     remmina
     google-chrome
     bottles
-    obsidian
     mariadb
     redis
   ];

@@ -227,6 +227,7 @@
 
     # remote client
     remmina
+    mgba
 
   ];
 
