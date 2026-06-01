@@ -6,7 +6,7 @@
   users.users.${username} = {
     isNormalUser = true;
     description = username;
-    extraGroups = [ "networkmanager" "wheel"  "libvirtd" "tss" "video" "scanner" "lp" "dialout"];
+    extraGroups = [ "networkmanager" "wheel"  "libvirtd" "tss" "video" "scanner" "lp" "dialout" "docker"];
   };
 
 
@@ -240,6 +240,7 @@
   ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
   virtualisation.libvirtd.enable = true;
+  virtualisation.docker.enable = true;
   #virtualisation.virtualbox.host.enable = true;
   #virtualisation.virtualbox.host.enableExtensionPack = true;
   virtualisation.spiceUSBRedirection.enable = true;
