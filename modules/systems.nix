@@ -14,7 +14,8 @@
 
   services.displayManager.sddm = {
     enable = true;
-    theme = "${import ./sddm-theme.nix { inherit pkgs;}}";
+    theme = "sddm-astronaut-theme";
+    extraPackages = [ pkgs.sddm-astronaut ];
   };
 
   nixpkgs.config.allowUnfree = true;
@@ -150,6 +151,7 @@
     vscode
     strongswan
     uv
+    sddm-astronaut
 
     nixfmt-rfc-style
     tpm2-tss

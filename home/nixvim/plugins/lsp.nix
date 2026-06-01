@@ -25,7 +25,8 @@
 	  enable = true;
 	  filetypes = ["html"  "php" "njk"];
 	};
-	volar.enable = true;
+	volar.enable = false;
+	vue_ls.enable = true;
 	ts_ls.enable = true;
 	nil_ls.enable = true;
 	volar.tslsIntegration = false;
