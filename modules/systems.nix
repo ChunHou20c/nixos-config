@@ -231,6 +231,9 @@
     remmina
     mgba
 
+    kubectl
+    dolphin-emu
+
   ];
 
   fonts.fontDir.enable = true;
