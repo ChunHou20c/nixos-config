@@ -5,5 +5,6 @@
     ./html.nix
     ./game-dev.nix
     ./db-tools.nix
+    ./ai-tools.nix
   ];
 }
