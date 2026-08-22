@@ -53,6 +53,7 @@
     bottles
     mariadb
     redis
+    wineWow64Packages.stable
   ];
 
    programs.fzf = {

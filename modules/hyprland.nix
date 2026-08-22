@@ -7,7 +7,7 @@
 
   programs.thunar.enable = true;
   
-  programs.thunar.plugins = with pkgs.xfce; [
+  programs.thunar.plugins = with pkgs; [
     thunar-archive-plugin
     thunar-volman
   ];
@@ -39,7 +39,7 @@
     # dunst
     swaynotificationcenter
     libnotify
-    swww
+    awww
 
     lz4
 
@@ -49,7 +49,7 @@
     copyq
 
     #for eww bar
-    python310
+    python3
     ruby
     jq
     swaylock-effects

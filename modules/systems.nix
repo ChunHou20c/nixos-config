@@ -31,7 +31,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-  programs.light.enable = true;
+  # programs.light.enable = true;
 
   programs.tmux = {
   
@@ -153,7 +153,7 @@
     uv
     sddm-astronaut
 
-    nixfmt-rfc-style
+    nixfmt
     tpm2-tss
     xfce.thunar
     niv
@@ -166,7 +166,7 @@
     st
     btop
     htop
-    neofetch
+    hyfetch
     virt-manager
     socat 
     simple-scan
@@ -209,9 +209,9 @@
     libsForQt5.qt5.qtgraphicaleffects
 
     # support both 32- and 64-bit applications
-    wineWowPackages.stable
-    winetricks
-    wineWowPackages.waylandFull
+    # wineWowPackages.stable
+    # winetricks
+    # wineWowPackages.waylandFull
 
     git
     # c compiler
@@ -256,6 +256,7 @@
   # allowUnfree = true;
   nixpkgs.config.permittedInsecurePackages = [
      "beekeeper-studio-5.3.4"
+     "docker-28.5.2"
   ];
   nixpkgs.config.android_sdk.accept_license = true;
 
